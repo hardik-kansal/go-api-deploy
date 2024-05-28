@@ -30,6 +30,13 @@ jobs:
       uses: actions/setup-go@v4
       with:
         go-version: '1.22.3'
+
+    - name: Install golang-migrate
+      run:  |
+        curl -L https://github.com/golang-migrate/migrate/releases/tag/v4.17.1 | tar xvz   
+        sudo mv migrate.tar.gz /usr/bin/migrate
+        which migrate
+
     
     - name: Migrate schema
       run: make migrateup
