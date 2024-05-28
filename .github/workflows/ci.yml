@@ -6,9 +6,10 @@ on:
   pull_request:
     branches: [ "master" ]
 jobs:
-  services:
+  test:
+    services:
       postgres:
-        image: postgres16
+        image: postgres:16
         env:
           POSTGRES_PASSWORD: 123
           POSTGRES_DB: simplebank
@@ -20,8 +21,6 @@ jobs:
           --health-retries 5
         ports:
           - 5432:5432
-
-  test:
     name: Test
     runs-on: ubuntu-latest
     steps:
