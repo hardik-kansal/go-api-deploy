@@ -13,7 +13,7 @@ migrateup:
 migratedown:
 	migrate -path db/migration -database "$(DB_URL)" -verbose down
 test:
-	go test --v -cover ./..
+	go test -v -cover ./..
 
 
 	
