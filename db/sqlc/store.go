@@ -5,9 +5,6 @@ import (
 
 	"github.com/jackc/pgx/v5/pgxpool"
 )
-type Store interface {
-	TransferTx(ctx context.Context, arg TransferTxParams) (TransferTxResult, error)
-}
 type SQLStore struct {
 	connPool *pgxpool.Pool
 	*Queries
