@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 	"github.com/stretchr/testify/require"
-	"github.com/hardik-kansal/go-api-deploy/utils"
+	"github.com/hardik-kansal/go-api-deploy/util"
 )
 func Test_account(t *testing.T) {
 	arg:= CreateAccountParams{
