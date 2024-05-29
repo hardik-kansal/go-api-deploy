@@ -8,7 +8,7 @@
 - [X] A clean way to implement database transaction in Golang
 - [X] DB transaction lock & How to handle deadlock in Golang
 - [X] How to avoid deadlock in DB transaction? Queries order matters!
-- [ ] Deeply understand transaction isolation levels & read phenomena in MySQL & PostgreSQL
+- [X] Deeply understand transaction isolation levels & read phenomena in MySQL & PostgreSQL
 - [X] Setup Github Actions for Golang + Postgres to run automated tests
 
 ## Section 2: Building RESTful HTTP JSON API [Gin]
