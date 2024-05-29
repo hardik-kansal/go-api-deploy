@@ -1,4 +1,4 @@
-DB_URL=postgresql://root:tuAPiwWjyPFtnuNdVwF4@simplebank-id.c3682agooslu.ap-southeast-2.rds.amazonaws.com:5432/simplebank
+DB_URL=postgresql://root:123@localhost:5432/simplebank?sslmode=disable
 rm:
 	docker stop pg16
 	docker rm pg16
@@ -13,7 +13,9 @@ migrateup:
 migratedown:
 	migrate -path db/migration -database "$(DB_URL)" -verbose down
 test:
-	go test -v -cover ./..
+	go test ./...
+sqlc:
+	sqlc generate
 
 
 	
