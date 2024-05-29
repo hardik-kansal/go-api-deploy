@@ -38,4 +38,6 @@ jobs:
 
     - name: Migrate schema
       run: make migrateup
+    - name: test
+      run: make test
 

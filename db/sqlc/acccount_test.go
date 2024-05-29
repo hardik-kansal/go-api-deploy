@@ -4,12 +4,13 @@ import (
 	"context"
 	"testing"
 	"github.com/stretchr/testify/require"
+	"github.com/hardik-kansal/go-api-deploy/utils"
 )
 func Test_account(t *testing.T) {
 	arg:= CreateAccountParams{
-		Owner:    "abc",
-		Currency: "USD",
-		Balance:  10,
+		Owner:util.RandomOwner(),
+		Currency: util.RandomCurrency(),
+		Balance:  util.RandomMoney(),
 	}
 	insertedAccount, err := queries.CreateAccount(context.Background(),arg)
 	require.NoError(t, err)
