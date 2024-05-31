@@ -45,3 +45,6 @@
 
 #### Honing golang skills each day !
 [Backend Course Link](https://www.youtube.com/playlist?list=PLy_6D98if3ULEtXtNSY_2qN21VCKgoQAE)
+
+
+`docker run --name simplebank -e GIN_MODE=release --network bank-network -p 8000:8000 -e DB_URL="postgresql://root:123@pg16:5432/simplebank?sslmode=disable" simplebank`

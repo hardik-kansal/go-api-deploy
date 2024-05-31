@@ -3,7 +3,7 @@ rm:
 	docker stop pg16
 	docker rm pg16
 postgres:
-	docker run --name pg16 -p 5432:5432 -e POSTGRES_PASSWORD=123 -e POSTGRES_USER=root -d postgres:16-alpine
+	docker run --name pg16 --network bank-network -p 5432:5432 -e POSTGRES_PASSWORD=123 -e POSTGRES_USER=root -d postgres:16-alpine
 createdb:
 	docker exec -it pg16 createdb --username=root --owner=root simplebank
 dropdb:
