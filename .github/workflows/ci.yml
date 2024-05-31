@@ -37,7 +37,7 @@ jobs:
         which migrate
 
     - name: Migrate schema
-      run: make migrateup
+      run: make migrateup1
     - name: test
       run: make test
 
