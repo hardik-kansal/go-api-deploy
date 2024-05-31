@@ -42,3 +42,6 @@
 - [ ] How to use Ingress to route traffics to different services in Kubernetes
 - [ ] Automatic issue TLS certificates in Kubernetes with Let's Encrypt
 - [ ] Automatic deploy to Kubernetes with Github Action
+
+#### Honing golang skills each day !
+[Backend Course Link](https://www.youtube.com/playlist?list=PLy_6D98if3ULEtXtNSY_2qN21VCKgoQAE)
