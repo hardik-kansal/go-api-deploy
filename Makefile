@@ -22,7 +22,7 @@ sqlc:
 	sqlc generate
 server:
 	go run main.go
-.PHONY:	sqlc test migratedown migrateup dropdb createdb postgres rm server
+.PHONY:	sqlc test migratedown migrateup dropdb createdb postgres rm server migratedown1 migrateup1
 
 
 	
