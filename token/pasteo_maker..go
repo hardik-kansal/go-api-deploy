@@ -8,7 +8,7 @@ import (
 	"github.com/o1egl/paseto"
 )
 type Maker interface {
-	CreateToken(username string, role string, duration time.Duration) (string, *Payload, error)
+	CreateToken(username string,duration time.Duration) (string, *Payload, error)
 	VerifyToken(token string) (*Payload, error)
 }
 
@@ -30,8 +30,8 @@ func NewPasetoMaker(symmetricKey string) (Maker, error) {
 	return maker, nil
 }
 
-func (maker *PasetoMaker) CreateToken(username string, role string, duration time.Duration) (string, *Payload, error) {
-	payload, err := NewPayload(username, role, duration)
+func (maker *PasetoMaker) CreateToken(username string,duration time.Duration) (string, *Payload, error) {
+	payload, err := NewPayload(username,duration)
 	if err != nil {
 		return "", payload, err
 	}
