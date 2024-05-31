@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/require"
 )
 func TestTransferTx(t *testing.T) {
-	account1 := createRandomAccount(t)
-	account2 := createRandomAccount(t)
+	account1 := CreateRandomAccount(t)
+	account2 := CreateRandomAccount(t)
 	fmt.Println(">> before:", account1.Balance, account2.Balance)
 
 	n := 5

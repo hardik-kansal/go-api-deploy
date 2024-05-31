@@ -30,4 +30,12 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+/* 	for i:=0;i<20;i++{
+		arg := db.CreateAccountParams{
+			Owner:    util.RandomOwner(),
+			Balance:  util.RandomMoney(),
+			Currency: util.RandomCurrency(),
+		}
+		store.CreateAccount(context.Background(),arg)
+	} */
 }
