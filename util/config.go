@@ -6,6 +6,7 @@ import (
 type ConfigPwd struct{
 	DriverName string `mapstructure:"DB_DRIVER"`
 	DriverURL string `mapstructure:"DB_URL"`
+	ServerAddr string `mapstructure:"SERVER_ADDR"`
 
 }
 func LoadConfig(path string)(ConfigPwd,error){
