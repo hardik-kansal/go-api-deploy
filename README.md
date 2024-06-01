@@ -13,28 +13,28 @@
 
 ## Section 2: Building RESTful HTTP JSON API [Gin]
 
-- [ ] Implement RESTful HTTP API in Go using Gin
-- [ ] Load config from file & environment variables in Go with Viper
+- [X] Implement RESTful HTTP API in Go using Gin
+- [X] Load config from file & environment variables in Go with Viper
 - [ ] Mock DB for testing HTTP API in Go and achieve 100% coverage
-- [ ] Implement transfer money API with a custom params validator
-- [ ] Add users table with unique & foreign key constraints in PostgreSQL
+- [X] Implement transfer money API with a custom params validator
+- [X] Add users table with unique & foreign key constraints in PostgreSQL
 - [ ] How to handle DB errors in Golang correctly
-- [ ] How to securely store passwords? Hash password in Go with Bcrypt!
+- [X] How to securely store passwords? Hash password in Go with Bcrypt!
 - [ ] How to write stronger unit tests with a custom gomock matcher
 - [X] Why PASETO is better than JWT for token-based authentication?
-- [ ] How to create and verify JWT & PASETO token in Golang
-- [ ] Implement login user API that returns PASETO or JWT access token in Go
-- [ ] Implement authentication middleware and authorization rules in Golang using Gin
+- [X] How to create and verify JWT & PASETO token in Golang
+- [X] Implement login user API that returns PASETO or JWT access token in Go
+- [X] Implement authentication middleware and authorization rules in Golang using Gin
 
 ## Section 3: Deploying the application to production [Kubernetes + AWS]
 
 - [X] Build a minimal Golang Docker image with a multistage Dockerfile
-- [ ] How to use docker network to connect 2 stand-alone containers
-- [ ] How to write docker-compose file and control service start-up orders with wait-for.sh
+- [X] How to use docker network to connect 2 stand-alone containers
+- [X] How to write docker-compose file and control service start-up orders with wait-for.sh
 - [X] How to create a free tier AWS account
 - [X] Auto build & push docker image to AWS ECR with Github Actions
 - [X] How to create a production DB on AWS RDS
-- [ ] Store & retrieve production secrets with AWS secrets manager
+- [X] Store & retrieve production secrets with AWS secrets manager
 - [ ] Kubernetes architecture & How to create an EKS cluster on AWS
 - [ ] How to use kubectl & k9s to connect to a kubernetes cluster on AWS EKS
 - [ ] How to deploy a web app to Kubernetes cluster on AWS EKS
@@ -47,4 +47,3 @@
 [Backend Course Link](https://www.youtube.com/playlist?list=PLy_6D98if3ULEtXtNSY_2qN21VCKgoQAE)
 
 
-`docker run --name simplebank -e GIN_MODE=release --network bank-network -p 8000:8000 -e DB_URL="postgresql://root:123@pg16:5432/simplebank?sslmode=disable" simplebank`
