@@ -5,6 +5,7 @@
 set -e
 
 echo "migarte up command"
+source /app/app.env
 /app/migrate -path app/migration -database "$DB_URL" --verbose up 
 
 echo "start the app"
