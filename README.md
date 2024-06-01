@@ -44,6 +44,86 @@
 - [ ] Automatic deploy to Kubernetes with Github Action
 
 #### Honing golang skills each day !
+
+
+
+```markdown
+# Simple Bank
+
+This project sets up a simple banking application using Docker, PostgreSQL, and a Go backend. The following instructions will guide you through the setup process, including building and running the Docker containers and visualizing the database with TablePlus.
+
+## Prerequisites
+
+- Git
+- Docker
+- TablePlus (or any database visualization tool)
+- Make (if you don't have Make installed, you can manually run the equivalent commands)
+```
+
+## Setup Instructions
+
+### Step 1: Clone the Repository
+
+```bash
+git clone git@github.com:hardik-kansal/go-api-deploy.git
+cd go-api-deploy
+```
+
+### Step 2: Create a Docker Network
+
+```bash
+docker network create bank-network
+```
+
+### Step 3: Set Up PostgreSQL
+
+```bash
+make postgres
+make createdb
+make migrateup
+```
+
+### Step 4: Prepare the Dockerfile
+
+Overwrite the `example.dockerfile` to `Dockerfile`.
+
+```bash
+mv example.dockerfile Dockerfile
+```
+
+### Step 5: Build the Docker Image
+
+```bash
+docker build -t simplebank:latest .
+```
+
+### Step 6: Run the Docker Container
+
+```bash
+docker run --name simplebank -e GIN_MODE=release --network bank-network -p 8000:8000 -e DB_URL="postgresql://root:123@pg16:5432/simplebank?sslmode=disable" simplebank
+```
+
+### Step 7: Visualize the Database with TablePlus
+
+1. Open TablePlus.
+2. Create a new connection:
+   - **DB Name**: simplebank
+   - **User**: root
+   - **Password**: root
+   - **Host**: localhost
+   - **Port**: 5432
+
+### Step 8: Send Requests Using Postman
+
+Send requests to your server at `localhost:8000`.
+
+## Notes
+
+- Ensure that PostgreSQL is running on port 5432.
+- The server should be accessible on port 8000.
+- You can use TablePlus or any other database visualization tool to inspect and manage your database.
+- Use Postman to send HTTP requests to your backend service at `http://localhost:8000`.
+
 [Backend Course Link](https://www.youtube.com/playlist?list=PLy_6D98if3ULEtXtNSY_2qN21VCKgoQAE)
 
 
